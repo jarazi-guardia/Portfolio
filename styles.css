@@ -1,0 +1,167 @@
+/* Style professionnel et élégant pour le portfolio */
+
+/* Reset général : supprime marges et paddings par défaut et applique une police cohérente */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", Arial, sans-serif;
+}
+
+/* Style du corps de la page : fond dégradé et couleur du texte */
+body {
+    background: linear-gradient(135deg, #eef1f5, #dfe4ea);
+    color: #2b2b2b;
+    line-height: 1.7;
+    padding: 0 20px;
+}
+
+/* Header : centrage et padding */
+.header {
+    text-align: center;
+    padding: 70px 0 50px;
+}
+
+/* Titre principal du header */
+.header h1 {
+    font-size: 2.6rem;
+    font-weight: 700;
+    color: #1d1d1d;
+    letter-spacing: -1px;
+}
+
+/* Navigation : liste horizontale centrée */
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    list-style: none;
+    margin-top: 25px;
+}
+
+/* Liens de navigation : style et transition au survol */
+.navbar a {
+    text-decoration: none;
+    color: #444;
+    font-weight: 500;
+    font-size: 1.05rem;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.navbar a:hover {
+    color: #000;
+    transform: translateY(-2px);
+}
+
+/* Sections principales : conteneur avec fond semi-transparent et effet flou */
+.section {
+    max-width: 900px;
+    margin: 70px auto;
+    padding: 35px 40px;
+    background: #ffffffcc;
+    backdrop-filter: blur(6px);
+    border-radius: 18px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+}
+
+/* Titres des sections */
+.section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #111;
+    font-weight: 600;
+}
+
+/* Paragraphes des sections */
+.section p {
+    margin-bottom: 18px;
+    color: #444;
+    font-size: 1.05rem;
+}
+
+/* Compétences : grille responsive */
+.skill-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    margin-top: 25px;
+}
+
+/* Cartes de compétence : style et effet hover */
+.skill-card {
+    background: #fff;
+    border-radius: 14px;
+    padding: 25px;
+    border: 1px solid #e5e5e5;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* Titres dans les cartes de compétence */
+.skill-card h3 {
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+    color: #222;
+}
+
+/* Formulaire de contact : colonne avec espaces */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+/* Inputs et textarea : style et focus */
+.contact-form input,
+.contact-form textarea {
+    padding: 14px;
+    border: 1px solid #d1d1d1;
+    border-radius: 10px;
+    font-size: 1rem;
+    background: #fff;
+    transition: border 0.2s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #888;
+    outline: none;
+}
+
+/* Taille du textarea et possibilité de redimensionnement vertical */
+.contact-form textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+/* Boutons : style, couleur et effet hover */
+button {
+    padding: 14px 22px;
+    background-color: #1e1e1e;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #333;
+    transform: translateY(-3px);
+}
+
+/* Footer : centrage et style simple */
+.footer {
+    text-align: center;
+    padding: 50px 0;
+    color: #555;
+    font-size: 0.95rem;
+}
