@@ -3,17 +3,21 @@ name: Déployer Portfolio
 on:
   push:
     branches:
-      - main
+      - main  # Déploie à chaque push sur main
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
 
+    steps:
+      # Récupère le contenu du dépôt
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Déploie le site sur GitHub Pages
       - name: Déployer sur GitHub Pages
         uses: peaceiris/actions-gh-pages@v6
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: gh-pages
-          publish_dir: .
+          publish_branch: gh-pages  # Branche GitHub Pages créée automatiquement
+          publish_dir: .            # Racine du dépôt, là où est index.html
